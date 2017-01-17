@@ -36,7 +36,7 @@ Copyright = '(c) 2016 Nathan Bruce Driscoll. All rights reserved.'
 # PowerShellHostName = ''
 
 # Minimum version of the Windows PowerShell host required by this module
-# PowerShellHostVersion = ''
+# PowerShellHostVersion = '5.0'
 
 # Minimum version of Microsoft .NET Framework required by this module
 # DotNetFrameworkVersion = ''
