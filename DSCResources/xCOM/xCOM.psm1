@@ -1,17 +1,17 @@
-﻿
+
 function Get-TargetResource
 {
-	[CmdletBinding()]
-	[OutputType([System.Collections.Hashtable])]
-	param
-	(
-		[parameter(Mandatory = $true)]
-		[ValidateSet("MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission")]
-		[System.String]
-		$ComObject,
-		[System.String]
-		$SID
-	)
+    [CmdletBinding()]
+    [OutputType([System.Collections.Hashtable])]
+    param
+    (
+        [parameter(Mandatory = $true)]
+        [ValidateSet("MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission")]
+        [System.String]
+        $ComObject,
+        [System.String]
+        $SID
+    )
 
 
         switch($ComObject){
@@ -36,34 +36,34 @@ function Get-TargetResource
             $ReturnResult = $False
         }
 
-	    $returnValue = @{
-		    SID = $SID
-		    ComObject = $ComObject
-		    Ensure = $ReturnResult
-	    }
+        $returnValue = @{
+            SID = $SID
+            ComObject = $ComObject
+            Ensure = $ReturnResult
+        }
 
-	    $returnValue
+        $returnValue
 
 }
 
 
 function Set-TargetResource
 {
-	[CmdletBinding(SupportsShouldProcess=$true)]
-	param
-	(
-		[parameter(Mandatory = $true)]
-		[ValidateSet("MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission")]
-		[System.String]
-		$ComObject,
+    [CmdletBinding(SupportsShouldProcess=$true)]
+    param
+    (
+        [parameter(Mandatory = $true)]
+        [ValidateSet("MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission")]
+        [System.String]
+        $ComObject,
 
-		[System.String]
-		$SID,
+        [System.String]
+        $SID,
 
-		[ValidateSet("Present","Absent")]
-		[System.String]
-		$Ensure
-	)
+        [ValidateSet("Present","Absent")]
+        [System.String]
+        $Ensure
+    )
 
 
         switch($ComObject){
@@ -102,22 +102,22 @@ function Set-TargetResource
 
 function Test-TargetResource
 {
-	[CmdletBinding()]
-	[OutputType([System.Boolean])]
-	param
-	(
-		[parameter(Mandatory = $true)]
-		[ValidateSet("MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission")]
-		[System.String]
-		$ComObject,
+    [CmdletBinding()]
+    [OutputType([System.Boolean])]
+    param
+    (
+        [parameter(Mandatory = $true)]
+        [ValidateSet("MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission")]
+        [System.String]
+        $ComObject,
 
-		[System.String]
-		$SID,
+        [System.String]
+        $SID,
 
-		[ValidateSet("Present","Absent")]
-		[System.String]
-		$Ensure
-	)
+        [ValidateSet("Present","Absent")]
+        [System.String]
+        $Ensure
+    )
 
 
         switch($ComObject){
