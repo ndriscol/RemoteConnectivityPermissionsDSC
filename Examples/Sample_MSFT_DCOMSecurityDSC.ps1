@@ -4,7 +4,7 @@
     .DESCRIPTION
         This examples add a SID into one of the COM Security groups.
 #>
-Configuration Sample_xCom
+Configuration Sample_MSFT_DCOMSecurityDSC
 {
     param
     (
@@ -13,11 +13,11 @@ Configuration Sample_xCom
         $NodeName = 'localhost'
     )
 
-    Import-DSCResource -ModuleName xRemoteConnectivity
+    Import-DSCResource -ModuleName DCOMSecurityDSC
 
     Node $NodeName
     {
-        xCom SetUserAccount
+        MSFT_DCOMSecurityDSC SetUserAccount
         {
           Sid       = 'S-1-5-11'
           ComObject = 'DefaultAccessPermission'
@@ -26,5 +26,5 @@ Configuration Sample_xCom
     }
 }
 
-Sample_xCom
-Start-DscConfiguration -Path Sample_xCom -Wait -Verbose -Force
+Sample_MSFT_DCOMSecurityDSC
+Start-DscConfiguration -Path Sample_MSFT_DCOMSecurityDSC -Wait -Verbose -Force

@@ -1,5 +1,5 @@
-$Global:DSCModuleName      = 'xRemoteConnectivity'
-$Global:DSCResourceName    = 'xCom'
+$Global:DSCModuleName      = 'DCOMSecurityDSC'
+$Global:DSCResourceName    = 'MSFT_DCOMSecurityDSC'
 
 # Unit Test Template Version: 1.2.0
 $script:moduleRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)

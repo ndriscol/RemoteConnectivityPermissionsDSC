@@ -1,0 +1,10 @@
+
+[ClassVersion("1.0.0.0"), FriendlyName("")]
+class xCOM : OMI_BaseResource
+{
+    [Key, ValueMap{"MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission"}, Values{"MachineAccessRestriction","MachineLaunchRestriction","DefaultLaunchPermission","DefaultAccessPermission"}] String ComObject;
+    [Write] String SID;
+    [Write, ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+};
+
+

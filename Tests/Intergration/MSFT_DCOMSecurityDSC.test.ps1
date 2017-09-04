@@ -1,6 +1,6 @@
 ﻿
-$Global:DSCModuleName      = 'XWMIManagement' # Example xNetworking
-$Global:DSCResourceName    = 'xcom' # Example MSFT_xFirewall
+$Global:DSCModuleName      = 'DCOMSecurityDSC' # Example xNetworking
+$Global:DSCResourceName    = 'MSFT_DCOMSecurityDSC' # Example MSFT_xFirewall
 
 #region HEADER
 # Integration Test Template Version: 1.1.0
